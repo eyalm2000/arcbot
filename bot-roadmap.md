@@ -36,8 +36,8 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
   - **Stable versions:** Check every 5 minutes
   - **Earlybirds versions:** Check every 2 minutes during expected update hours (define in code)
 - **Sources:**
-  - **Windows Stable:** `https://releases.arc.net/windows/prod/Arc.appinstaller`
-  - **Windows Earlybirds:** `https://releases.arc.net/windows/rc/[EARLYBIRDS_HASH]/Arc.appinstaller`
+  - **Windows [Stable](#stable-appinstaller):** `https://releases.arc.net/windows/prod/Arc.appinstaller`
+  - **Windows [Earlybirds](#earlybirds-appinstaller):** `https://releases.arc.net/windows/rc/[EARLYBIRDS_HASH]/Arc.appinstaller`
 - **Actions:**
   - **Detect new version:**
     1. Download the `appinstaller` file using `requests`
@@ -162,7 +162,7 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
 </AppInstaller>
 ```
 
-### EarlyBirds .appinstaller
+### Earlybirds .appinstaller
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller Uri="https://releases.arc.net/windows/rc/8EE7CF18-AF4C-48AF-94B0-4B9300876DA5/Arc.appinstaller" Version="1.15.0.52516" xmlns="http://schemas.microsoft.com/appx/appinstaller/2018">
