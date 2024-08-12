@@ -33,10 +33,14 @@ STABLE_APPINSTALLER_URL = "https://releases.arc.net/windows/prod/Arc.appinstalle
 EARLYBIRDS_APPINSTALLER_URL = f"https://releases.arc.net/windows/rc/{EARLYBIRDS_HASH}/Arc.appinstaller"
 RELEASE_NOTES_URL = "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes"
 
-# Global variables to store last recorded versions
+# Global variables to store last recorded versions and files
 last_stable_version = None
 last_earlybirds_version = None
 last_earlybirds_files = None
+
+# User-Agent for requests
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+HEADERS = {'User-Agent': USER_AGENT}
 
 # Initialize the bot
 intents = discord.Intents.default()
@@ -71,8 +75,11 @@ def extract_msix_files(msix_path):
     try:
         with zipfile.ZipFile(msix_path, 'r') as zip_ref:
             return zip_ref.namelist()
+    except zipfile.BadZipFile:
+        log_error(f"Invalid MSIX file: {msix_path}")
+        return None
     except Exception as e:
-        log_error(f"Error extracting MSIX files: {e}")
+        log_error(f"Error extracting MSIX files: {type(e).__name__}: {e}")
         return None
 
 # Function to compare file lists
@@ -86,12 +93,17 @@ def compare_file_lists(old_list, new_list):
         try:
             with zipfile.ZipFile('old_version.msix', 'r') as old_zip, \
                  zipfile.ZipFile('new_version.msix', 'r') as new_zip:
+
+                # Check if the file is likely binary
+                if file.endswith(('.exe', '.dll', '.png', '.jpg', '.jpeg', '.gif')):
+                    continue  # Skip binary files
+
                 old_content = old_zip.read(file).decode('utf-8')
                 new_content = new_zip.read(file).decode('utf-8')
-                if old_content != new_content and not file.endswith(('.exe', '.dll')):
+                if old_content != new_content:
                     changed.append(file)
         except Exception as e:
-            log_error(f"Error comparing file content: {e}")
+            log_error(f"Error comparing file content: {type(e).__name__}: {e}")
 
     return added, removed, changed
 
@@ -135,7 +147,7 @@ def split_message(message, max_length=2000):
 async def check_stable_arc_updates():
     global last_stable_version
     try:
-        response = requests.get(STABLE_APPINSTALLER_URL)
+        response = requests.get(STABLE_APPINSTALLER_URL, headers=HEADERS)
         response.raise_for_status()
         new_version = extract_version(response.content)
 
@@ -150,12 +162,12 @@ async def check_stable_arc_updates():
             await send_stable_changelog(new_version)
 
     except requests.exceptions.RequestException as e:
-        log_error(f"Error checking stable Arc updates: {e}")
+        log_error(f"Error checking stable Arc updates: {type(e).__name__}: {e}")
 
 # Function to send stable changelog to news channel
 async def send_stable_changelog(version):
     try:
-        response = requests.get(RELEASE_NOTES_URL)
+        response = requests.get(RELEASE_NOTES_URL, headers=HEADERS)
         response.raise_for_status()
         changelog = extract_changelog(response.content, version)
 
@@ -176,7 +188,7 @@ async def send_stable_changelog(version):
         async def check_changelog_updates():
             nonlocal changelog
             try:
-                response = requests.get(RELEASE_NOTES_URL)
+                response = requests.get(RELEASE_NOTES_URL, headers=HEADERS)
                 response.raise_for_status()
                 new_changelog = extract_changelog(response.content, version)
 
@@ -202,19 +214,19 @@ async def send_stable_changelog(version):
 
                     check_changelog_updates.cancel()  # Stop checking once changelog is updated
             except requests.exceptions.RequestException as e:
-                log_error(f"Error checking changelog updates: {e}")
+                log_error(f"Error checking changelog updates: {type(e).__name__}: {e}")
 
         check_changelog_updates.start()
 
     except requests.exceptions.RequestException as e:
-        log_error(f"Error sending stable changelog: {e}")
+        log_error(f"Error sending stable changelog: {type(e).__name__}: {e}")
 
 # Task to check for Earlybirds Arc updates
 @tasks.loop(minutes=2)
 async def check_earlybirds_arc_updates():
     global last_earlybirds_version, last_earlybirds_files
     try:
-        response = requests.get(EARLYBIRDS_APPINSTALLER_URL)
+        response = requests.get(EARLYBIRDS_APPINSTALLER_URL, headers=HEADERS)
         response.raise_for_status()
         new_version = extract_version(response.content)
 
@@ -227,7 +239,7 @@ async def check_earlybirds_arc_updates():
 
             # Download and analyze MSIX
             msix_url = f"https://releases.arc.net/windows/rc/{EARLYBIRDS_HASH}/{new_version}/Arc.x64.msix"
-            msix_response = requests.get(msix_url)
+            msix_response = requests.get(msix_url, headers=HEADERS)
             msix_response.raise_for_status()
 
             with open("new_version.msix", "wb") as f:
@@ -241,7 +253,7 @@ async def check_earlybirds_arc_updates():
                     if os.path.exists("old_version.msix"):
                         os.remove("old_version.msix")
                     old_msix_url = f"https://releases.arc.net/windows/rc/{EARLYBIRDS_HASH}/{last_earlybirds_version}/Arc.x64.msix"
-                    old_msix_response = requests.get(old_msix_url)
+                    old_msix_response = requests.get(old_msix_url, headers=HEADERS)
                     old_msix_response.raise_for_status()
                     with open("old_version.msix", "wb") as f:
                         f.write(old_msix_response.content)
@@ -281,12 +293,14 @@ async def check_earlybirds_arc_updates():
                 for chunk in split_message(message_content):
                     await channel.send(chunk)
 
-            os.remove("new_version.msix")  # Clean up downloaded MSIX file
+            # Clean up downloaded MSIX files
+            if os.path.exists("new_version.msix"):
+                os.remove("new_version.msix")
             if os.path.exists("old_version.msix"):
                 os.remove("old_version.msix")
 
     except requests.exceptions.RequestException as e:
-        log_error(f"Error checking Earlybirds Arc updates: {e}")
+        log_error(f"Error checking Earlybirds Arc updates: {type(e).__name__}: {e}")
 
 # Start the tasks when the bot is ready
 @bot.event
