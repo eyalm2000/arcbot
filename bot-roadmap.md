@@ -55,13 +55,13 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
 
 ### 3. Sending Messages
 
-- **New version detected:**
-  - Send to all news channels (`NEWS_CHANNEL_ID`, `EARLY_NEWS_CHANNEL_ID`)
+- **New stable version detected:**
+  - Send to `WIN_CHAT_CHANNEL_ID`
   - Content: "A new version of Arc is available. Check it out!"
 
 - **Stable version update:**
-  - Channels: `NEWS_CHANNEL_ID`, `WIN_CHAT_CHANNEL_ID`
-  - Ping: `WINDOWS_NEWS_ROLE_ID` (only for `NEWS_CHANNEL_ID`)
+  - Channels: `NEWS_CHANNEL_ID`
+  - Ping: `WINDOWS_NEWS_ROLE_ID` 
   - [Content](#stable-version-message-example) for `NEWS_CHANNEL_ID`:
     ```
     # <:arc:1159648372324569198> Arc for Windows Update - [VERSION]
@@ -76,13 +76,11 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
     - If changes exist, edit the message
     - If no changes, check every 1 minute until changes are detected
     - If no valid changelog, replace [CHANGELOG] with:
-      "Waiting for release notes. It could take a few minutes."
-  - Content for `WIN_CHAT_CHANNEL_ID`:
-    "There is a new version of Arc for Windows! Go and download it!"
+      "/n - Waiting for release notes. It could take a few minutes. /n"
+  
 
 - **Earlybirds version update:**
   - Channels: `EARLY_NEWS_CHANNEL_ID`, `EARLY_CHAT_CHANNEL_ID`
-  - Ping: Include ping (if exists) when sending the message
   - Content for `EARLY_NEWS_CHANNEL_ID`:
     ```
     # <:arcReleaseCandidate:1159647421316485162> Arc Early Birds Update - [VERSION]
