@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <!-- v24856 -->
+
+
+  <title>Arc for Windows - 2023/2024 Release Notes &ndash; Arc Help Center</title>
+
+  
+
+  <meta name="description" content="August 8, 2024 v.1.14.0   Now you can record and submit a Performance Trace on Arc for Windows! Performance Traces are super useful for..." /><meta property="og:image" content="https:/hc/theming_assets/01HZPQZ0F2XCQNFEFY41C54GGW" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Arc Help Center" />
+<meta property="og:title" content="Arc for Windows - 2023/2024 Release Notes" />
+<meta property="og:description" content="August 8, 2024
+v.1.14.0
+
+
+Now you can record and submit a Performance Trace on Arc for Windows! Performance Traces are super useful for helping us figure out how to solve performance issues in Arc...." />
+<meta property="og:url" content="https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes" />
+<link rel="canonical" href="https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes">
+<link rel="alternate" hreflang="en-us" href="https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes">
+<link rel="alternate" hreflang="x-default" href="https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes">
+
+  <link rel="stylesheet" href="//static.zdassets.com/hc/assets/application-a42a464885a505c24ac3b0ab35047489.css" media="all" id="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/hc/theming_assets/18135269/16435094084503/style.css?digest=24927900782359">
+
+  <link rel="icon" type="image/x-icon" href="/hc/theming_assets/01HZPQZ0Z0KTF23X4R7HT7T5KV">
+
+    
+    
+
+  <link rel="icon" href="https://arc.net/favicon.png">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<!-- Make the translated search clear button label available for use in JS -->
+<!-- See buildClearSearchButton() in script.js -->
+<script type="text/javascript">window.searchClearButtonLabelLocalized = "Clear search";</script>
+
+
+  
+</head>
+<body class="">
+  
+  
+
+  <a class="skip-navigation" tabindex="1" href="#main-content">Skip to main content</a>
+
+<header class="header">
+<script defer data-domain="resources.arc.net" src="https://plausible.io/js/script.js"></script>
+  <div class="container">
+    <div class="logo">
+      <a title="Home" href="/hc/en-us">
+        <img src="/hc/theming_assets/01HZPQZ0F2XCQNFEFY41C54GGW" alt="Arc Help Center Help Center home page" />
+        
+      </a>
+    </div>
+    <div class="search-container">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon" >>
+        <path d="M10.9998 19.0001C15.418 19.0001 18.9998 15.4184 18.9998 11.0001C18.9998 6.58184 15.418 3.00012 10.9998 3.00012C6.58148 3.00012 2.99976 6.58184 2.99976 11.0001C2.99976 15.4184 6.58148 19.0001 10.9998 19.0001Z" stroke="#3139FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M20.9997 21.0001L16.6497 16.6501" stroke="#3139FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <form role="search" class="search search-full" data-search="" data-instant="true" autocomplete="off" action="/hc/en-us/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="search" name="query" id="query" placeholder="Search all articles..." autocomplete="off" aria-label="Search all articles..." /></form>
+    </div>
+    <a href="https://arc.net/" class="button">Download Arc</a>
+    
+      
+    </div> 
+
+    
+<div class="header-after"></div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector('.header');
+
+  const toggleStickyClass = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    header.classList.toggle('sticky', scrollTop >= 30);
+  };
+
+
+  // Initial call to set the initial state based on the initial scroll position
+  toggleStickyClass();
+
+  // Listen for the scroll and resize events
+  window.addEventListener("scroll", toggleStickyClass);
+  window.addEventListener("resize", toggleStickyClass);
+});
+  
+
+document.addEventListener('DOMContentLoaded', function () {
+    const headerElem = document.querySelector('.header')
+
+    if (window.location.pathname === '/hc/en-us' ) {
+  		headerElem.classList.add('homepage-header')
+    } else{
+      headerElem.classList.add('loaded')
+  }
+});
+
+</script>
+
+
+
+  <main role="main">
+    <div class="container article-page-container">
+  <div class="article-container" id="article-container">
+    <aside class="article-sidebar" aria-labelledby="section-articles-title">
+        <div class="collapsible-sidebar">
+          <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
+              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
+            </svg>
+          </button>
+          <span id="section-articles-title" class="collapsible-sidebar-title sidenav-title">
+            On this Page
+          </span>
+          <div class="collapsible-sidebar-body">
+            <div class="article-toc-container"></div>
+          </div>
+        </div>
+      
+    </aside>
+
+    <article id="main-content" class="article">
+      <nav aria-label="Current location">
+  <ol class="breadcrumbs">
+    
+      <li>
+        
+          <a href="/hc/en-us">Arc Help Center</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/hc/en-us/categories/16435255982103-Features">Features</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/hc/en-us/sections/20497738798231-Release-Notes">Release Notes</a>
+        
+      </li>
+    
+  </ol>
+</nav>
+
+      <header class="article-header">
+        <h1 title="Arc for Windows - 2023/2024 Release Notes" class="article-title" data-title="Arc for Windows - 2023/2024 Release Notes">
+          Arc for Windows - 2023/2024 Release Notes
+          
+        </h1>
+
+        
+
+        
+      </header>
+
+      <section class="article-info">
+        <div class="article-content">
+          <div class="article-body"><h2 id="h_01J4Q87QTDABF2620WC5B3ME2D">August 8, 2024</h2>
+<p>v.1.14.0</p>
+<ul>
+<li>
+<strong>Now you can record and submit a Performance Trace on Arc for Windows!</strong> Performance Traces are super useful for helping us figure out how to solve performance issues in Arc. Thanks to Seb for better bug reporting!
+<ul>
+<li>
+<a href="/hc/en-us/articles/25481019999639" target="_blank" rel="noopener noreferrer">Learn more about how to submit a Performance Trace</a>&nbsp;</li>
+</ul>
+</li>
+<li>
+<strong>We now support a wider array of Intel and AMD CPUs</strong> thanks to the Performance &amp; Stability Team! <a href="https://resources.arc.net/hc/en-us/articles/19400148671383-Unsupported-Devices" target="_blank" rel="noopener noreferrer">If your PC can run Windows 10 19H1 you should be able to run Arc</a>.</li>
+<li>
+<strong>Recent Fixes:</strong>
+<ul>
+<li>The Command Bar didn’t show any suggested results after entering a query or URL. Thanks for keeping the suggestions flowing, Alex!</li>
+<li>An option to translate would appear when there was nothing to translate.</li>
+<li>Space icon emojis occasionally wouldn’t display. We’ve made improvements to how emojis render in the Sidebar to fix this. Now our icons won’t ghost us, thanks to Alexandra!</li>
+</ul>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTDDWC5YTSK5QVPY77S">August 1, 2024</h2>
+<p>v.1.13.0</p>
+<ul>
+<li>
+<strong>Arc is now available on Windows 10</strong> version 19H1 and newer! <a href="https://resources.arc.net/hc/en-us/articles/19400148671383-Unsupported-Devices">Check the minimum requirements to run Arc on Windows 10</a>. Download the latest from <a href="http://arc.net/download">arc.net/download</a>.</li>
+<li>
+<strong>Fixed Issue(s):</strong>
+<ul>
+<li>Focus would always shift to the first Space after reordering Spaces.</li>
+<li>The <a href="https://resources.arc.net/hc/en-us/articles/19234766331799-Mini-Player-Watch-or-Listen-as-you-Browse#miniplayerpictureinpicture">Mini Player (Picture-in-Picture)</a> would not fully close when returning to the tab playing the original video.</li>
+<li>If you've experienced issues with <a href="https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync">Arc Sync</a>, <a href="https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI">Arc Max</a> or submitting reports via "<a href="https://resources.arc.net/hc/requests/new">Contact the Team</a>" please sign out (Arc Menu &gt; Sign Out) and sign back in to Arc. This will resolve the issue.<br><br>Some Members reported that they were force signed out of Arc due to this issue. Arc will now display a banner in Settings (Control+Comma) urging Members experiencing this issue to sign out and back in to resolve.<br><br>Please make sure to save your <a href="https://resources.arc.net/hc/en-us/articles/22370005382167-Recovery-Cards#windows">Recovery Phrase</a> before signing out to prevent issues reenabling Arc Sync.</li>
+</ul>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTD279G0V10RXE9E6SG">July 25, 2024</h2>
+<p>v.1.12.2</p>
+<ul>
+<li><strong><a href="https://arc.net/l/quote/pljiwjqr" target="_blank" rel="noopener noreferrer">Control+Shift+C</a> now removes additional link trackers when sharing Instagram URLs.</strong></li>
+<li><strong>This version updates Arc to Chromium version 127.0.6533.73.</strong></li>
+<li>
+<strong>Fixed Issue(s):</strong>
+<ul>
+<li>We’ve made several fixes to reduce crashes and improve the overall stability of Arc for Windows! Huge shout out to the Performance team for all their hard work 💪</li>
+<li>Some Members were logged out of Arc for Windows after restarting the app. This has been fixed as of v.1.12.2.</li>
+</ul>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTD6FQ63JQH970ANH1Y">July 18, 2024</h2>
+<p>v.1.11.3</p>
+<ul>
+<li>
+<strong>You can now reorder your <a href="https://resources.arc.net/hc/en-us/articles/19228064149143-Spaces-Distinct-Browsing-Areas" target="_blank" rel="noopener noreferrer">Spaces</a> on Arc for Windows!</strong> From the bottom of your Sidebar, click and drag a Space icon to change the order. Changes to Space order syncs across Windows and macOS if you have <a href="https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync" target="_blank" rel="noopener noreferrer">Arc Sync</a> enabled. Huge shoutout to Brian and Freddy for getting this across the line!<br><br>Note: <em>Members previously reported a bug with rearranging Spaces that has since been fixed. Thanks so much for reporting this</em> 🙏</li>
+<li>
+<strong><a href="/hc/en-us/articles/22731612065815" target="_blank" rel="noopener noreferrer">GitHub Live Folders</a> now shows review requests for teams you are on. </strong>Shout out to for Connor making GitHub Live Folders even more useful!</li>
+<li>
+<strong>Fixed Issue(s):</strong>
+<ul>
+<li>
+<a href="https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#askonpage" target="_blank" rel="noopener noreferrer">Ask on Page</a> wouldn’t allow subsequent queries after entering a blank query.</li>
+<li>Joining a Teams meeting via <a href="https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars" target="_blank" rel="noopener noreferrer">Live Calendar</a> would sometimes start a phone call instead of a Teams video call.</li>
+<li>
+<a href="https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI" target="_blank" rel="noopener noreferrer">Arc Max</a> features could not be enabled in onboarding.</li>
+<li>The <a href="https://developer.chrome.com/docs/devtools/device-mode#open_the_device_toolbar" target="_blank" rel="noopener noreferrer">device toolbar</a> was not available in dev tools. You can now enable the device toolbar in dev tools by clicking the devices icon or with Control-Shift-M.</li>
+<li>Some Members were logged out of Arc for Windows after restarting the app. This has been fixed as of v.1.11.3.</li>
+</ul>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTDPGRGJSHQP75HNE2F">July 11, 2024</h2>
+<p>v.1.10.0</p>
+<p>Thanks for using Arc! We have a new version for you, including:</p>
+<ul>
+<li>Introducing <strong><a href="/hc/en-us/articles/19335160678679" target="_blank" rel="noopener noreferrer">Arc Max</a>,</strong> our suite of AI-powered features designed to power up your browsing 🌸 <br><br>This week, we're excited to launch two new Max features:
+<ul>
+<li>
+<strong><a href="https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#tidytabs" target="_blank" rel="noopener noreferrer">Tidy Tabs</a>:</strong> Automatically organize your sidebar into clean categories with the "Tidy" button.</li>
+<li>
+<strong><a href="https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#askonpage" target="_blank" rel="noopener noreferrer">Ask on Page</a>:</strong> Use Control-F to ask Arc any question about the current page. You can turn AI features on or off in Arc Settings.</li>
+</ul>
+</li>
+<li>
+<strong>Settings persistence:</strong> Thanks to a member report, we fixed an issue where settings weren't persisted across restarts of Arc. Appreciate you!</li>
+<li>
+<strong>Command Bar:</strong> We've removed the scroll bar from the Command Bar for a cleaner UI and to fix a common bug.</li>
+</ul>
+<h2 id="h_01J4Q87QTD5Z0PZYG57MZB656K">June 27, 2024</h2>
+<p>v.1.8.0</p>
+<p>Thanks for using Arc! We have a new version for you, including:</p>
+<ul>
+<li>
+<strong>Live Calendars for Windows:</strong> Now, when Google Calendar is pinned as a favorite in your Sidebar, you'll see a countdown timer in the calendar icon. Also, when it's time for the meeting to start, a "Join" button will automatically appear in your Sidebar, allowing you to jump into your next video call with one click. To change your Live Calendar's updates, just right-click the calendar icon and adjust its settings. Huge shoutout to Ben, Connor, and Freddy for bringing your Sidebar to life with this feature!</li>
+<li>
+<strong>Window Loading Performance Improvement:</strong> Alexandra has enhanced window loading performance by delaying the title bar display until the window is ready, resulting in a faster and more responsive interface.</li>
+<li>
+<strong>Translation Button Reliability Fix:</strong> Previously, there was an issue where the Translate button was not reliably responsive in certain cases. Thanks to Brian, this issue has been resolved, ensuring translations happen seamlessly each time.</li>
+<li>
+<strong>Bug Fix for Window Restoration After Restart:</strong> Thanks to Sherry, we have fixed an issue where, upon restarting, Arc would restore a temporary window that made it difficult to access spaces and pinned tabs. Now, we restore a full window with each restart, along with the temporary one if that was the last one closed.</li>
+<li>
+<strong>Small Design Polish for Account Settings:</strong> Alexandra has added some tiny-but-mighty design polish to account settings, making all widths of setting menus consistent for a more streamlined appearance.</li>
+<li>
+<strong>Longstanding Tab Closing Fix:</strong> Thanks to Seb, Adam, and Maya, we've fixed a longstanding issue that caused tabs to be archived ahead of your specified "Archive tabs after..." setting — improving tab management reliability.</li>
+</ul>
+<h2 id="h_01J4Q87QTDNZY0RWQYKSRC3GK5">June 20, 2024</h2>
+<p>v.1.7.1</p>
+<ul>
+<li>
+<strong>Recall for Maximized Window States:</strong> Thanks to Alexandra, Arc now remembers if your window was maximized, allowing its size and position to be restored immediately when it’s reopened.</li>
+<li>
+<strong>Toggling Peek Feature:</strong> You can now turn the Peek feature on or off in Settings. This allows for two specific adjustments: toggling Peek when clicking links in pinned tabs and Favorites, and disabling Peek when holding “Shift” while clicking a link. To make these changes, navigate to Arc &gt; Settings &gt; General, and toggle the respective Peek options as needed. Kudos to Fabrice for making this possible.</li>
+<li>
+<strong>Bug Fix for Task Switcher Icons:</strong> Steve has fixed an issue where the Arc icon was missing from the task switcher (activated with Alt + Tab) and was incorrectly replaced with Windows’ default “no icon available” symbol. Now, when using the task switcher, the Arc icon will appear correctly.</li>
+<li>
+<strong>Automatic Page Translation:</strong> Thanks to Brian, Arc now offers translation if a website is not in your default language. If you’re on a page in a language other than your default, just find the globe icon in the top right corner, click “Translate” in the dialog box, and you’re all set.</li>
+</ul>
+<h2 id="h_01J4Q87QTDTJHA5ADGTS4A4XGA">June 13, 2024</h2>
+<p>v.1.6.1</p>
+<ul>
+<li>
+<strong>Increased Tab Switching Speed:</strong> Thanks to Seb’s refactoring of tab logic, we’ve significantly increased the speed at which members can switch between tabs. By reducing the amount of work required for tab switching, we’ve made the process much faster and flicker-free — especially for devices with lower processing power.</li>
+<li>
+<strong>Account Management Updates:</strong> You can now easily update your name and email address, or delete your account, right from Arc’s Settings menu. Just find the Arc logo in the top left corner, navigate to “Settings,” click “Edit Account,” and make any adjustments you need. Shoutout to Alexandra for this major update!</li>
+<li>
+<strong>Improved Window Restoration Performance:</strong> Scott resolved an issue where, in some cases, the Arc window would not open after authentication. This should result in a more reliable and faster window restoration process.</li>
+<li>
+<strong>Staggered New Windows:</strong> Thanks to Alexandra’s handiwork, new windows now open slightly staggered from one another, rather than directly on top of each other, making them easier to view and click.</li>
+<li>
+<strong>Improved Favicon Visibility for Synced Tabs:</strong> Thanks to Andrzej’s improvements on favicon caching for pinned tabs that are synced across mobile and desktop. Now, for synced devices, pinned tabs should appear on desktop with a visible green dot favicon.</li>
+<li>
+<strong>Increased Reliability of Sync Toggle Settings:</strong> Props to Andrzej for also increasing the reliability of our sync toggle settings, ensuring that syncing across devices persists after the feature is initiated.&nbsp;</li>
+<li>
+<strong>Functional Top Bar Buttons:</strong> Alexandra fixed a bug that caused the top bar buttons to be unresponsive. They are now fully functional and ready to use.</li>
+</ul>
+<h2 id="h_01J4Q87QTD55E89ZA02JQ2K1DQ">June 06, 2024</h2>
+<p>v.1.5.0</p>
+<ul>
+<li>
+<strong>GitHub Live Folders</strong>: We’re introducing GitHub Live Folders that automatically compile and organize PRs. To get started, create a Pull Request, and let Arc magically create a new folder called “Pull Requests.” Watch your Live Folder stay up-to-date automatically, compiling PRs as they’re created and clearing them out once they’re completed. For a more tailored view, right-click on the Live Folder to filter and configure as needed. Big thanks to Freddy and Connor for making this happen!</li>
+<li>
+<strong>Audio Player Integration for Mini Player:</strong> Thanks to Alexandra, if you have a video playing in the Mini Player (Picture-in-Picture) and dismiss it by clicking the X, the video will be dismissed but the audio can still be played in the Sidebar Audio Player. This is perfect for moments when you just need the audio from a video playing in the background, such as YouTube podcasts, video lectures, and more.</li>
+<li>
+<strong>Peek Tab Dismissal:</strong> You can now dismiss a Peek tab using the Esc key. Kudos to Miko for this convenient update.</li>
+<li>
+<strong>Print Dialog Dismissal</strong>: Thanks to Miko, you can also use the Esc key to dismiss Print dialogs.</li>
+<li>
+<strong>Enhanced Drag and Drop Support</strong>: We’ve added support for more drag-and-drop data formats. Due to Miko’s work, you can now do things like drag and drop links into your Sidebar, downloads from the Sidebar library (bottom left corner), and songs into a Spotify playlist.</li>
+<li>
+<strong>Pinned Tab Dragging Issue:</strong> Alexandra fixed an issue where dragging a Pinned Tab out of your Sidebar to create a new window would not result in the tab being selected in the new window.</li>
+<li>
+<strong>Accessibility Updates</strong>: The UI elements and web contents now provide more information in accessibility tools such as Accessibility Insights and Inspect.exe. Kudos to Miko for prioritizing accessibility.</li>
+<li>
+<strong>Unexpected Space Focus Switch:</strong> Thanks to Darin, we’ve resolved an issue where selecting a tab in one Space would switch focus to another Space unexpectedly.</li>
+<li>
+<strong>Extension Popup Size Issue</strong>: Miko fixed an issue that caused extension popups to display at an incorrect size.</li>
+<li>
+<strong>Google Pay Functionality</strong>: With help from Mark, we fixed an issue that prevented Google Pay from working as expected.</li>
+<li>
+<strong>Dev Tools Cloning Fix</strong>: Thanks to Alexandra, we resolved an issue where undocked dev tools would recursively clone if two or more dev tools windows are opened.</li>
+<li>
+<strong>Dev Tools ‘F12’ Fix</strong>: Miko’s handiwork helped us fix a crash triggered holding F12 when dev tools are open.</li>
+</ul>
+<h2 id="h_01J4Q87QTD2GC5Y7NZK0HR652P">
+<br><br>May 23, 2024</h2>
+<p>v.1.3.3</p>
+<ul>
+<li>We’ve added the <a href="https://resources.arc.net/hc/en-us/articles/19234766331799-Mini-Player-Watch-or-Listen-as-you-Browse#audioplayer" target="_blank" rel="noopener noreferrer">Audio Player</a>! Click away from any tab playing audio and you’ll notice a small audio controller appear at the bottom of your Sidebar. To remove the Audio Player from your sidebar, simply click the "X" or close button on the controller.</li>
+<li>We’ve added vertical Split Views! To create a Vertical Split you click the Split icon next to the minimize window control icon and select Add Top Split or Add Bottom Split. You can also create a vertical Split View from the Command Bar (Ctrl+T) and typing “add top split” or “add bottom split”.</li>
+<li>You can now set an icon for your Spaces!
+<ul>
+<li>To change your Space icon, right click on your Space &gt; click ‘Change Space icon’ &gt; select an emoji.</li>
+<li>To remove a Space icon, right click on your Space &gt; click ‘Change Space icon’ &gt; click the trash icon.</li>
+<li>Space icons will Sync across your Arc installs on Windows and Mac.</li>
+</ul>
+</li>
+<li>You can now use the back/forward buttons on your mouse to switch Spaces</li>
+<li>You can now drag downloads from the Downloads menu (Ctrl+J) into web contents</li>
+<li>You can now drag links from web contents into your Sidebar to create a new tab</li>
+<li>We now automatically freeze background tabs that use too much CPU</li>
+<li>We fixed an issue where Settings (Ctrl+,) would open behind the main Arc window</li>
+<li>We fixed an issue where opening a new tab from Ctrl+T and selecting one of the Command Bar suggestions in a Space associated with a non-Default Profile would cause a forced focus switch to the first Space in your Default Profile</li>
+<li>In 1.3.2 we fixed an issue that removed Favorites in Spaces associated with non-Default Profiles and occasionally affected Members would not be able to add their Favorites back to these Spaces.</li>
+<li>Arc 1.3.2 updates to Chromium 125.0.6422.112 which includes a security fix for CVE-2024-5274</li>
+<li>Arc 1.3.3 updates to Chromium 125.0.6422.113</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTD5GCB904Z0K7HTNJ8">&nbsp;</h2>
+<h2 id="h_01J4Q87QTDGSM3WE5NECK5ZNTA">May 16, 2024</h2>
+<p>v.1.2.1</p>
+<ul>
+<li>We're making updating faster!
+<ul>
+<li>The update banner in the Sidebar will only show once the update has been downloaded, so this means if you click on the banner the app will terminate and restart immediately!</li>
+<li>Updating via Arc menu &gt; Check for Updates is now a two click process. The first click will download the update, and then the second click will restart the app.</li>
+</ul>
+</li>
+<li>We’ve updated the Pinned Folder icons! Pinned Folder icons will now be drawn in full color instead of just a monochrome outline and and we’ve added an open/close animation.</li>
+<li>You can now open the Command Bar to show the current URL with Alt+D in addition to Ctrl+L</li>
+<li>You can now open the Arc menu using Alt+F</li>
+<li>You can now open the Arc menu when the Sidebar is hidden and no web content is in view</li>
+<li>We’ve added the ability to remove a tab from your Favorites using Ctrl+T and then typing “unfavorite tab”</li>
+<li>The top toolbar can now be dynamically resized fixing an issue where toolbar elements (pinned extensions, window controls, URL bar) would overlap at smaller window widths</li>
+<li>We fixed an issue where the back/forward history drop down would persist after using Ctrl+Tab to quickly switch away and then back to the tab where the history drop down was opened -</li>
+<li>We fixed an issue that prevented Arc windows from closing using the window controls or Alt+F4</li>
+<li>We now show a warning dialog if your processor does not meet our minimum requirements. You'll still be able to use Arc for Windows, but you'll likely experience issues. Learn more at <a href="http://arc.net/requirements">arc.net/requirements</a>
+</li>
+<li>In 1.2.1 we fixed an issue where Members with multiple Profiles and Spaces could get into a state where all Spaces were assigned to the Default Profile and could not edit Favorites in other Profiles.</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTD1BFMSPM516TEQ090">&nbsp;</h2>
+<h2 id="h_01J4Q87QTDEPZH0E3ESQSYY1A1">May 9, 2024</h2>
+<p>v.1.1.2</p>
+<ul>
+<li>We fixed an issue where Arc would not open as expected when clicking an Arc notification in the Windows notification center</li>
+<li>We fixed an issue that caused Sidebar corners to become unrounded when the Sidebar is undocked and in view</li>
+<li>We fixed an issue that caused web contents corners to become unrounded when a new tab is created</li>
+<li>We fixed an issue where an empty section would appear in the context menu if you right click an empty space in the Sidebar</li>
+<li>We’ve improved how we handle logging when Arc experiences an unclean shutdown. This will help us catch and resolve even more crashes!</li>
+<li>We’ve improved how we handle logging when multiple Arc windows are closed at once. This will help us catch and resolve more crashes that occur when Arc windows are being closed.</li>
+<li>We fixed a crash that was impacting a large amount of Members on 1.1.0. This issue was resolved in 1.1.1. You can update by going to the Arc menu &gt; Check for updates or update directly from the installer available on <a href="https://arc.net/download" target="_blank" rel="noopener noreferrer">arc.net/download.</a>
+</li>
+<li>Arc 1.1.2 updates to Chromium 124.0.6367.207 which includes a security fix for CVE-2024-4671</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTD6EYWC0VGXG9AAR3E">&nbsp;</h2>
+<h2 id="h_01J4Q87QTDFZF4QNWGA407DQ7P">April 30, 2024</h2>
+<p>v.1.0.1</p>
+<ul>
+<li>Welcome to Arc for Windows 1.0 🎉
+<ul>
+<li>You can download at <a href="https://arc.net/download">arc.net/download</a>
+</li>
+<li>Check out <a href="/hc/en-us/articles/19400148671383">this page</a> to see if your Windows device is supported</li>
+</ul>
+</li>
+<li>We fixed a crash that occurred when accessing arc://password-manager/passwords and password manager extensions</li>
+</ul>
+<h2 id="h_01J4Q87QTDA7N32K8DK6VWD1W1">April 22, 2024</h2>
+<p>v.0.19.2</p>
+<ul>
+<li>We now show a toast with the zoom percentage when you zoom in and out with Ctrl + +/- or Ctrl + mouse scroll wheel</li>
+<li>Middle mouse clicking or holding Ctrl and left clicking on the Back, Forward and Refresh buttons will now perform those actions in a new tab</li>
+<li>Your last Arc window will now be restored to the same size and position it was in before it was closed</li>
+<li>You can now view the Chromium version in the updater window (Arc menu &gt; Check for Updates)</li>
+<li>The Chromium version is now included in the build info that’s copied to your clipboard through Arc menu &gt; Help &gt; Copy Build Info</li>
+<li>We now will open Chromium level settings (such as Privacy and Security or Passwords) in the correct Profile when accessed through Arc Menu &gt; Settings &gt; Profile</li>
+<li>If you drag a tab out of your Sidebar to create a new Blank Window then Close all Windows from the taskbar we will restore your main Arc window and the Blank Window when you relaunch Arc</li>
+<li>We fixed an issue that caused the Command Bar (Ctrl + T) to get dismissed when the Sidebar is undocked and in view</li>
+<li>We fixed an issue from preventing the keyboard shortcuts to Print (Ctrl + P) and View Page Source (Ctrl + U) from working as expected</li>
+<li>We fixed an issue that would cause Sidebar text to become unreadable when switching from Windows light theme to dark theme or vice versa</li>
+<li>We fixed an issue where rapidly opening and closing a Pinned Folder would cause a gap in the Sidebar</li>
+<li>We fixed an issue where right clicks on the Back/Forward buttons and Pinned Tab favicons would trigger left click actions</li>
+<li>We fixed an issue that prevented extensions from opening new Arc windows</li>
+<li>We fixed an issue where you could not click the Next button when Importing from Firefox</li>
+<li>We fixed an issue where Members couldn’t use Arc for Windows if their GPU isn’t supported by Chromium</li>
+<li>We fixed an issue where a newly created Space would show tabs from a different Space in the Sidebar</li>
+<li>We fixed an issue where Pinned Extensions would overlap with the window control icons</li>
+<li>Arc for Windows can now be run from an external drive without causing a crash after login</li>
+<li>We fixed a crash that occurred when dragging a tab out of the Sidebar to create a new window</li>
+<li>We fixed a crash caused by overflow text in Arc notifications on Windows. Arc notifications on Widows will now be truncated if overly long</li>
+<li>We fixed a crash that occurred when using the F shortcut to full screen a video while in Split View</li>
+<li>We fixed a crash that occurred when creating a new tab from the + button in the Sidebar</li>
+<li>We have updated the Chromium version to 124.0.6367.92</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTDTK1NPKAC68V5BKMR">April 15, 2024</h2>
+<p>v.0.18.0</p>
+<ul>
+<li>We’ve added the Copy URL as Markdown shortcut Alt+Shift+Control+C</li>
+<li>We now show a toast when you unarchive a tab that reopens in a different Space to the one you are on</li>
+<li>When being Inspected, extension popups will stay open and won’t close when unfocused</li>
+<li>Double clicking on extension popups will no longer cause the popup window to maximize</li>
+<li>The Add Split View shortcut is now accurate displayed in the Command Bar as Contrl+Shift++</li>
+<li>We’ve added About Arc to Arc Menu &gt; Help. This will take you to arc://settings/help where you can see the Chromium version Arc is using</li>
+<li>We fixed an issue where Appearance &gt; Setting &gt; Acrylic would not show a transparent blur effect with in Windows light theme</li>
+<li>We fixed an issue where you could create a Split View from a blank window, resulting in a Split Tab on the right and a blank Split Tab on the left</li>
+<li>We fixed an issue where you would not be shown a new Space after creating it</li>
+<li>We fixed a crash caused when viewing the Downloads flyout from the toolbar</li>
+<li>We fixed a crash caused by clicking pinned extensions when the extension pop up window is already open</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTDJD50T2SBH863MWHN">&nbsp;</h2>
+<h2 id="h_01J4Q87QTD520545X2E0EPVXEA">April 8, 2024</h2>
+<p>v.0.17.2</p>
+<ul>
+<li>Dragging the Sidebar to resize is now much smoother</li>
+<li>Resizing the sidebar will no longer get 'out of sync' with your mouse if you go past the width limits</li>
+<li>Dark Space Themes now appear darker</li>
+<li>Our error messages on sign in are more specific</li>
+<li>We fixed an issue that caused a flicker when resizing the Sidebar</li>
+<li>We fixed issues with dragging and dropping Pinned Folders and dragging and dropping Pinned tabs within Pinned Folders</li>
+<li>We fixed an issue that caused Arc to log you out of websites frequently</li>
+<li>We fixed an issue where Back to Tab would not work as expected for Picture-in-Picture video across multiple Profiles</li>
+<li>We fixed an issue where if you used the keyboard or Space icons to switch Spaces you would get stuck in a state where you could no longer switch Spaces</li>
+<li>We fixed an issue where Today tabs would appear across multiple Profiles when switching Spaces</li>
+<li>We fixed an issue that would cause the Sidebar to scroll down when swiping between Spaces</li>
+<li>We fixed an issue that caused a the Arc Taskbar icon to have a highlight behind it when in Windows light theme</li>
+<li>We fixed an issue that stopped F11 to full screen from working</li>
+<li>We fixed a crash that would cause a Space to be removed by swiping when Arc Sync is enabled</li>
+<li>We fixed a crash that occurred when dragging a tab into a Pinned Folder</li>
+<li>We fixed a crash that occurred when selected suggestions in the Command Bar</li>
+<li>We fixed a crash that occurred when using ALt-F4 to close a second Arc Window</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTD8X15BMZVWTV8CEFD">&nbsp;</h2>
+<h2 id="h_01J4Q87QTD0EBX90PZDTJH3TSG">April 4, 2024</h2>
+<p>v.0.16.2</p>
+<ul>
+<li>You can now open .pdf files in Arc by default! Go to Windows Settings &gt; Apps &gt; Default apps &gt; Arc and set .pdf to Arc</li>
+<li>You can now dismiss the Command Bar (Ctrl+T) by clicking anywhere outside of it</li>
+<li>You can now dismiss the Arc menu by clicking anywhere outside of it</li>
+<li>You can now mute and unmute the a tab playing audio by clicking the audio icon in the Sidebar</li>
+<li>Favorites will render much more smoothly in the Sidebar when swiping between Spaces associated with different Profiles</li>
+<li>If you choose to save your Recovery Phrase for Arc Sync locally, we now create a new file instead of overriding the currently saved file. If there is a conflict with another file, you will be prompted to pick and file location so you can give the file a different name.</li>
+<li>We’ve visually updated your Arc Sync Recovery Card</li>
+<li>We removed the context menu option “Share Folder” when right clicking on a Pinned Folder as this share feature is not yet supported on Arc for Windows</li>
+<li>We fixed a contrast issue with icons in the Command Bar (Ctrl+T) while your computer is using a dark theme</li>
+<li>We fixed a crash that occurred when rendering your Membership Card in Settings</li>
+<li>We fixed an issue that cased a syncing error when syncing between Arc for Windows and Arc for macOS Early Birds</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTDZQJJ093Q23GGDMVD">&nbsp;</h2>
+<h2 id="h_01J4Q87QTD302JMJPN371XQ17D">March 28, 2024</h2>
+<p>v.0.15.4</p>
+<ul>
+<li>All Arc on macOS Members can now sign in to Arc for Windows without an invite! If you’re already an Arc on macOS Member and would like to try Arc on your Windows 11 machine, check out our <a href="https://www.notion.so/Getting-Started-with-Arc-for-Windows-145ece36acbb40f381ce1817747cb7ca?pvs=21">onboarding document</a> for info on how to download, install and sign in to Arc for Windows.</li>
+<li>We now support tab freezing and discarding in Arc on Windows! This will prevent memory usage from increasing over time, and this will help reduce the CPU usage caused by background tabs!</li>
+<li>This release includes an updated installer. If you have been experiencing issues with install try installing version 0.15.1 from <a href="https://releases.arc.net/windows/ArcInstaller.exe">https://releases.arc.net/windows/ArcInstaller.exe</a>.<br><br>Please note that updated installer will not install on machines with ARM processors (including Apple Silicon Macs running Parallels) as they are not supported at this time.</li>
+</ul>
+<ul>
+<li>Enabling Arc Sync in Settings will now always show you your Recovery Phrase. You can read more about Arc Sync and Recovery <a href="https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#recoverycardsandrecoveringsynceddata">here</a>
+</li>
+<li>Clicking the “Sorry! Sync has been disabled…” toast will open Settings so you can quickly reenable Arc Sync</li>
+<li>We have made Arc Sync error messages more interactive so it’s more clear what actions Members should take (restart, enter password, update) to resolve the sync issue</li>
+<li>We now support syncing gradient Space Themes from Arc on macOS</li>
+<li>Accessing Settings from the Arc menu or Ctrl+, when the Settings panel is already open will bring the Settings panel window to the front instead of creating a new Settings panel window</li>
+<li>Highlighting text in your Sidebar, such as when renaming a Space or Tab, will now match your Space theme</li>
+<li>We now show a “New Tab Created” toast when opening a link in a new tab from the context menu or Ctrl+click and the Sidebar is hidden</li>
+<li>We now show a clickable URL bar when no web contents are being shown</li>
+<li>The close, expand and open in Split buttons for Peek tabs now match the order they appear in on Arc for macOS</li>
+<li>In Arc menu &gt; Check for Updates clicking the version number now copies it to the clipboard</li>
+<li>Clicking the + button in the Sidebar when in an Incognito Window will now open the Command Bar just like on Arc for macOS</li>
+<li>We fixed an issue with Arc Sync where toggling the setting would cause the "Ensuring encrypted by” notification to display indefinitely</li>
+<li>We fixed an issue where your Arc Membership card would not display in Settings</li>
+<li>We fixed an issue where changes made in Settings would not persist</li>
+<li>We fixed an issue where opening Settings would cause the Settings panel would show for a half second then go behind the main Arc window</li>
+<li>We fixed an issue where web contents would not regain focus after page refresh</li>
+<li>We fixed an issue where rapidly tapping or clicking the web contents of a page would cause a crash</li>
+<li>We now show a more friendly error message when a non-allowlisted email attempts to create an account.</li>
+<li>We fixed an issue with Arc Sync getting disabled. You may be required to sign in to Arc for Windows after this update.</li>
+<li>We fixed a crash that occurred when opening peek window.</li>
+<li>Various crash fixes and performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTD956TA7YE6TSF53Y7">March 21, 2024</h2>
+<p>v.0.14.2</p>
+<ul>
+<li>Arc Sync is now available in Arc for Windows!
+<ul>
+<li>To enable Arc Sync go to Arc menu &gt; Settings &gt; Arc Sync and toggle the setting On.</li>
+<li>When you turn on syncing, all your Spaces, Folders, and Tabs will Sync. History, passwords, extensions, Favorites tabs, and Profiles will not Sync between devices. We hope to support syncing for these features soon!</li>
+<li>When Arc Sync is enabled your Spaces will sync across your installs of Arc across Windows and macOS as long as all installs of Arc are on the latest version and you are signed into the same Arc account.</li>
+<li>Arc Sync is end-to-end encrypted and requires your Arc Recovery Card to access your synced data in the event you forget your password, and don’t have any access to other devices that have previously synced. You can find your Recover Card in Arc for Windows in Arc menu &gt; Settings &gt; Arc Sync &gt; view your Recovery Card. If you are an Arc on Windows and macOS Member your Recovery Card is the same across both platforms. You can learn more about Recovery Cards and recovering synced data <a href="https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#recoverycardsandrecoveringsynceddata">here</a>.</li>
+<li>If you are an Arc for macOS Member, make sure that the new end-to-end encrypted Arc Sync is enabled as iCloud based Sync will not sync your Spaces with Arc for Windows. You can find the steps to enable end-to-end encrypted Sync on Arc for macOS <a href="https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#howtosyncarcacrossdevicesmac">here</a>.</li>
+</ul>
+</li>
+<li>Membership Cards now appear in Settings (Arc menu &gt; Settings or Ctrl+,)</li>
+<li>Links to <a href="http://resources.arc.net">resources.arc.net</a> accessed from the Arc menu will open in Arc for Windows by default</li>
+<li>Notifications now integrate into the Action Center and have a new look and feel</li>
+<li>We now have an updated favicon to indicate unsupported items in the Sidebar</li>
+<li>You can select either Mica or Acrylic material background from Arc menu &gt; Settings &gt; Appearance</li>
+<li>We’ve improved the collapse animation for Folder Peek tabs</li>
+<li>We now show Split View tab favicons in the Command Bar</li>
+<li>We fixed an issue where you were unable to open settings or options for extensions</li>
+<li>We fixed an issue where accessing the Site Control Center would cause the unanchored Sidebar to appear</li>
+<li>We fixed an issue where Dev Tools could not be viewed in an undocked (windowed) view</li>
+<li>We fixed an issue that would cause keyboard shortcuts to stop working</li>
+<li>We fixed an issue where Arc account emails would get encoded incorrectly when submitting bug reports</li>
+<li>We fixed a crash that occurred when running Arc on Windows in a virtual desktop</li>
+<li>We fixed a crash that occurred when copying a URL to the clipboard</li>
+<li>Various additional crash fixes</li>
+</ul>
+<h2 id="h_01J4Q87QTDW9MG8ATPHPYK1RJQ">March 14, 2024</h2>
+<p>v.0.13.1</p>
+<ul>
+<li>Videos will now automatically open in the Mini Player (Picture-in-Picture) when you switch to a new tab while they are playing. You can toggle this setting off per website from the Site Control Center next to the URL bar. An option to toggle this off globally will be coming in a future release.</li>
+<li>Arc Membership cards will be available during onboarding. Membership cards will be coming to the Settings panel in a future release</li>
+<li>We now render keyboard shortcuts in Command Bar suggestions just like Arc for macOS</li>
+<li>We've made several improvements to the look and feel of toasts</li>
+<li>We’ve made some visual polish updates to the onboarding flow</li>
+<li>We now link to our Terms of Service and Privacy Policy in the onboarding flow Create an Account page</li>
+<li>We’ve made some visual polish updates to the Sidebar</li>
+<li>We’ve decreased the volume on the unboxing startup sound</li>
+<li>We’ve added support for Ctrl + F4 to close tabs</li>
+<li>We’ve made improvements to the Pinned Folder expand/collapse animations</li>
+<li>We fixed an issue that could hang Arc when scrolling with the middle mouse button and left-clicking immediately afterwards</li>
+<li>We fixed an issue where when the Sidebar is unanchored and a Space name is being edited or a new Space is being created, the Sidebar could be unintentionally hidden breaking the Space creation/edit flow</li>
+<li>We fixed an issue where setting tabs to Auto Archive to 30 days would still archive tabs after 12 hours</li>
+<li>We fixed an issue where hovering over the unanchored Sidebar would not trigger the Sidebar to appear</li>
+<li>We fixed an issue where the web contents would not be in focus after a system modal window, like the system file picker, is displayed</li>
+<li>We fixed an issue where rapidly clicking the Archive icon in the Sidebar would unarchive tabs</li>
+<li>We’ve made UI interactions more responsive</li>
+<li>We’ve improved performance of window creation, including app startup</li>
+<li>We've made performance improvements to further reduce CPU and memory consumption</li>
+<li>We've made stability improvements to reduce crashes</li>
+<li>Arc for Windows beta now uses Mica material to reduce resource consumption. We will be adding the option to toggle between Mica and Acrylic in a future release</li>
+<li>We fixed a crash that occurred when closing your last Arc window</li>
+</ul>
+<h2 id="h_01J4Q87QTD16WSJ0DXRM6ZCBSV">March 7, 2024</h2>
+<p>v.0.12.0</p>
+<ul>
+<li>We now have full touch screen support</li>
+<li>Emoji inputs now work as expected with Win+.</li>
+<li>You can now right click/two finger tap on your Sidebar to bring up the Space options context menu</li>
+<li>We updated our toggle switches in Settings to be in line with Windows standards</li>
+<li>When hovering over links the status pill will now match your Sidebar theme</li>
+<li>We added tooltips for close window and minimize window when Arc is full screened</li>
+<li>We fixed an issue where a Space name will not get replaced with the placeholder name (Space 1, for example) when the Space name has been removed</li>
+<li>We fixed an issue where the Opera logo would not display when using Import from Another Browser</li>
+<li>We fixed an issue where extension icons would not load after install</li>
+<li>We fixed an issue where there would be a space for the download icon in the Sidebar even when the icon is hidden and no downloads are visible</li>
+<li>We fixed an issue where toggling switches in Site Settings caused a flicker</li>
+<li>We fixed a crash that occurred when using Import from Another Browser</li>
+<li>We have reduced the resource usage of background tabs</li>
+</ul>
+<h2 id="h_01J4Q87QTD2NAWSJN1ESRZ7SV9">February 29, 2024</h2>
+<p>v.0.11.0</p>
+<ul>
+<li>We now support playback of DRM streaming content (Netflix, Disney+, Prime Video, Spotify etc.)</li>
+<li>Existing Arc for Windows beta Members can now import their bookmarks from another browser. To do this go to the Arc menu &gt; Import from Another Browser and follow the prompts. Arc for Windows beta supports importing from the following browsers:
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Brave</li>
+<li>Edge</li>
+<li>Opera</li>
+<li>Vivaldi</li>
+</ul>
+</li>
+<li>We’ve added support for importing bookmarks to specific Arc Profile when using Import from Another Browser.</li>
+<li>We’ve added support for importing cookies when using Import from Another Browser.</li>
+<li>We added tooltips to UI elements that were missing them previously</li>
+<li>We fixed an issue with the app installer that prevented Members from running the installer as expected. If you’ve been having installer issues try downloading and installing the latest release from <a href="https://releases.arc.net/windows/prod/Arc.appinstaller">https://releases.arc.net/windows/prod/Arc.appinstaller</a>
+</li>
+<li>General performance improvements</li>
+</ul>
+<h2 id="h_01J4Q87QTDBKNPCTQQ6TERGP45">February 22, 2024</h2>
+<p>v.0.10.1</p>
+<ul>
+<li>Introducing Peek! Peek is a convenient way to preview sites from Pinned Tabs. Simply click on a new link from a Pinned or Favorited Tab, and Arc will automatically open that tab in Peek!
+<ul>
+<li>To open Peek in a new tab: Hit the expand button arrows or Ctrl + O</li>
+<li>To open Peek in a Split View: Hit the Split View button</li>
+<li>To close Peek: Click outside the Peek window or hit the X button</li>
+</ul>
+</li>
+<li>You can now access Arc Settings from Arc menu &gt; Settings or Ctrl + , to
+<ul>
+<li>Easily rename and delete <a href="https://resources.arc.net/hc/en-us/articles/19227964556183-Profiles-Separate-Work-Personal-Browsing">Profiles</a>
+</li>
+<li>Adjust <a href="https://resources.arc.net/hc/en-us/articles/19228855311127-Auto-Archive-Clean-as-you-go">Auto Archive</a> tab settings from 12 hours to a maximum of 30 days</li>
+<li>Set a default download location</li>
+<li>Set a default search engine including support for Perplexity AI as default.</li>
+<li>Quickly access settings for privacy and security, passwords, credit card information, notifications settings, and browsing data</li>
+</ul>
+</li>
+<li>New Members can now import bookmarks from other browsers on account creation. We will be bringing this feature to existing Members in a future release. Arc for Windows beta supports importing from the following browsers:
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Brave</li>
+<li>Edge</li>
+<li>Opera</li>
+<li>Vivaldi</li>
+</ul>
+</li>
+<li>You can now resize Split Views by clicking and dragging the divider between them</li>
+<li>Dev Tools, accessible from Ctrl + Shift + I or right click &gt; Inspect, can now be docked to the right, left or bottom of the window instead of defaulting to a windowed view</li>
+<li>Extension popups will now have a correct, slightly larger, vertical size set</li>
+<li>Extension popups will now close if blurred and a non-Arc window is focused</li>
+<li>We fixed text selection scrolling when cursor is outside of Arc window</li>
+<li>We've made touchpad interactions more robust by allowing pan-to-scroll gestures</li>
+<li>We fixed a problem with web contents stopping responding when quickly starting consecutive drag operations</li>
+<li>We made web contents correctly blur</li>
+<li>We fixed a reproducible Chromium crash in v.0.10.1. Please update Arc for Windows beta to v.0.10.1 from the Arc menu &gt; Check for Updates, from Ctrl + T and typing “check for updates” or from the <a href="https://releases.arc.net/windows/prod/Arc.appinstaller">app installer</a> directly to get this fix.</li>
+</ul>
+<h2 id="h_01J4Q87QTD5TAG3AF4D0HVH1QF">February 15, 2024</h2>
+<p>v.0.9.0</p>
+<ul>
+<li>We now have an updated (and nicer looking!) app icon</li>
+<li>You can now create Split Views by rearranging tabs in the sidebar. Drag a tab to the left or right of another tab to create a new split.</li>
+<li>We've added autocomplete support in the command bar</li>
+<li>If you navigate to a new URL within a Pinned Tab and then hover over the tab favicon, we’ll now show you a “Back to Pinned URL” subtitle. Click the favicon to return to the original Pinned URL.</li>
+<li>We fixed a bug where your cursor would stay visible when watching full screen video.</li>
+<li>We fixed a bug where the Arc window would change size every time you closed and reopened Arc</li>
+<li>We fixed a bug where the sidebar would stay visible when in full screen mode</li>
+<li>We fixed a bug where you could not drag to a new window in multiple desktops</li>
+<li>We've made several performance improvements including:
+<ul>
+<li>Fixing a significant hang on startup</li>
+<li>Fixing a significant hang on dragging a tab to create a new window</li>
+<li>Various window creation and command bar optimizations</li>
+</ul>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTDWNWJAVT334M4VA14">February 8, 2024</h2>
+<p>v.0.8.0</p>
+<ul>
+<li>You can now reset your password in Arc for Windows beta!</li>
+</ul>
+<p>To this go to the Arc menu &gt; Help &gt; Sign Out then enter your Arc account email on the Sign In screen and click Forgot Password. If there’s an Arc account associated with that email, we’ll send you a password reset link.</p>
+<p>If you're logged out of Arc for Windows beta and on an earlier version, you can update to version 0.8.0 through the app installer. Here's a link to download the app installer if you need it: <a href="https://releases.arc.net/windows/prod/Arc.appinstaller">https://releases.arc.net/windows/prod/Arc.appinstaller</a></p>
+<ul>
+<li>We now support F5 to refresh</li>
+<li>We’ve added support for dragging a tab out of the Sidebar to create a new window</li>
+<li>We’ve added our classic Arc unboxing flow with (most) of the bells and whistles from the unboxing flow in Arc for macOS</li>
+<li>We’ve implemented a new Profile creation flow! To create a new Profile hover over your Space name in your Sidebar &gt; click Edit &gt; Profile &gt; New Profile…</li>
+<li>We fixed a bug where edits to a Pinned URL would not persist. You can edit your Pinned and Favorite tab URLs by right clicking the tab &gt; Pinned URL &gt; Edit Pinned URL…</li>
+<li>We fixed a bug where Profiles were getting removed unexpectedly. If you experienced this bug you will need to uninstall and reinstall Arc from&nbsp;<a href="https://releases.arc.net/windows/prod/Arc.appinstaller">https://releases.arc.net/windows/prod/Arc.appinstaller</a>
+</li>
+</ul>
+<h2 id="h_01J4Q87QTD9FFFHTEEBCRXZM1W">February 1, 2024</h2>
+<p>v.0.7.0</p>
+<ul>
+<li>We've added a new Space Creation flow to increase customization, profile selection, and delight!</li>
+<li>Long-press on the Toolbar's back and forward buttons will now show tab history</li>
+<li>Split Views will take on the color of each site for a more seamless look</li>
+<li>Alert dialogs now work from extensions and dev tools</li>
+<li>Bug reports, feedback and questions are now directed through Arc Menu &gt; Help &gt; Contact the Team</li>
+<li>We fixed a bug that prevented feedback on password requirements from showing in the Create Account flow</li>
+<li>We fixed a bug where spell check suggestions were not visible from the context menu</li>
+<li>We fixed a bug where the offer to save passwords dialogs were not appearing</li>
+<li>We fixed an issue where Arc would crash when right clicking a link to open in Split View</li>
+<li>We’ve made various performance improvements&nbsp;including fixing memory leaks</li>
+</ul>
+<h2 id="h_01J4Q87QTDJ5QHCP55BWEDEH12">January 25, 2024</h2>
+<p>v.0.6.0</p>
+<ul>
+<li>We've added Command Bar Actions! In addition to creating new tabs in the Command Bar (Ctrl+T), you can type common actions you take in Arc, like Pin Tab or New Folder, to take actions in an instant and without moving your fingers to your mouse. Here are a few Command Bar Actions to try:
+<ul>
+<li>Pin Tab</li>
+<li>Pin to [Space Name]</li>
+<li>Toggle Sidebar</li>
+<li>New Split View</li>
+<li>Rename [Space, Current Tab]</li>
+<li>New [Folder, Note, Space, Notion Page, FigJam, Google Doc]</li>
+<li>Extension [Extension Name]</li>
+<li>View [Archive, History, Source]</li>
+</ul>
+</li>
+<li>We now have Pinned Extensions! Open the Site Control Panel in the toolbar &gt; hover over the extension and click the pin. Your extension will now be pinned to the top right of your toolbar for easy access.</li>
+<li>We've added support for undoing an action via Ctrl+Z! Any time you Archive Tabs or move Tabs in your Sidebar, simply press Ctrl+Z to undo that action.</li>
+<li>We've added support for F11 to Full Screen Arc!</li>
+<li>We’ve added support for web UI dialogs such as the print dialog</li>
+<li>We’ve added support for web login dialogs</li>
+<li>We've added support dragging sidebar items between windows</li>
+<li>We now show app icons in Windows dialogs when you click a link that will open another app</li>
+<li>We fixed a crash that occurred when trying to view your saved passwords in Arc's password manager</li>
+<li>We fixed a crash that occurred when trying to enable Windows Hello when filling in passwords</li>
+</ul>
+<h2 id="h_01J4Q87QTE3H6150YQM3ZPX31S">January 18, 2024</h2>
+<p>v.0.5.1</p>
+<ul>
+<li>Profiles are now available! Hover over your Space name in your Sidebar &gt; click Edit &gt; Profile to assign and create Profiles for your Spaces</li>
+<li>You can enter full screen with Alt-Shift-F</li>
+<li>We added Ctrl-Shift-+ shortcut to open a new Split View</li>
+<li>When Control-S and Control-Shift-C conflict with a website's keyboard shortcut we'll give you the chance to run the Arc keyboard shortcut instead of the website's</li>
+<li>Space switching is now faster</li>
+<li>The current tab in a Pinned Folder will stay in view in your Sidebar even if the Folder is collapsed</li>
+<li>We've made improvements to Site Control Center</li>
+<li>Website right click menus now use native menus</li>
+<li>We fixed a bug stopping print dialogs from showing</li>
+<li>We fixed a bug preventing extension processes from exiting when their associated popups are closed</li>
+<li>We fixed a bug where Favorite Tab order would not stick after closing and reopening Arc</li>
+<li>We fixed a bug where sometimes the full screen button would not work on a video</li>
+<li>We fixed an issue with external protocol dialog preventing you from authenticating an external app in Arc for Windows</li>
+<li>We fixed a bug where closing a second Arc window will crash Arc</li>
+</ul>
+<h2 id="h_01J4Q87QTEPFCCT795E80ZKZR4">January 8, 2024</h2>
+<p>v.0.4.2</p>
+<ul>
+<li>We've fixed an issue that could have prevented logging in or signing up.</li>
+<li>We've added Space theming. Click the “Edit” button next to your Space title to change your theme to any color!</li>
+<li>We fixed a bug that prevented full screen video.</li>
+<li>Various additional bug fixes and improvements.</li>
+</ul>
+<h2 id="h_01J4Q87QTEMZSZYFPMWWXCYG34">December 18, 2023</h2>
+<p>v.0.2.1</p>
+<ul>
+<li>We restore recent tabs between sessions now!</li>
+<li>Find in Page now also cycle matches with F3 and Shift F3.</li>
+<li>When creating a new tab with the sidebar hidden, there's a toast with a button to take you to that new tab.</li>
+<li>Double clicking a favorite resets it to its pinned URL.</li>
+<li>Spaces now update in the Arc Menu &gt; Spaces when you add / remove spaces</li>
+<li>We updated the UI for selected tabs and favorites</li>
+<li>We improved drag and drop UI visuals</li>
+<li>Added close button for pinned tabs</li>
+<li>We fixed duplicate toasts and dismissal interactions.</li>
+<li>We fixed some tab and favorite item click interactions.</li>
+<li>We fixed the download removal from UI when removed from disk.</li>
+<li>We fixed a bug where the split screen button in the top bar didn't work.</li>
+<li>We fixed a bug where we would crash when selecting a tab with find-in-page opened.</li>
+<li>Fixed a bug where we were not displaying the right information for a space after you created a new space</li>
+<li>Fixed a crash after login screen that some Members were experiencing</li>
+</ul>
+<h2 id="h_01J4Q87QTE2SRDN8HVK77ZANAD">December 11, 2023</h2>
+<p><strong>0.1.0</strong></p>
+<ul>
+<li>Welcome to the Arc for Windows beta!</li>
+</ul></div>
+
+          
+            <section class="content-tags">
+              <p>Related to</p>
+              <ul class="content-tag-list">
+                
+                  <li class="content-tag-item" data-content-tag-id="01J1WH1WBS6BEZ31RRP3TB9R2H">
+                    <a title="Search results" href="/hc/en-us/search?content_tags=01J1WH1WBS6BEZ31RRP3TB9R2H&amp;utf8=%E2%9C%93">
+                      Arc for Windows
+                    </a>
+                  </li>
+                
+              </ul>
+            </section>
+          
+
+          
+        </div>
+      </section>
+
+      <footer>
+        <div class="article-footer">
+          
+          
+        </div>
+        
+  
+          <div class="article-votes">
+            <span class="article-votes-question" id="article-votes-label">Was this article helpful?</span>
+            <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
+              <button type="button" class="button article-vote article-vote-up" data-auth-action="signin" aria-label="This article was helpful" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M14 10.0001H18.7639C20.2507 10.0001 21.2177 11.5647 20.5528 12.8946L17.0528 19.8945C16.714 20.5721 16.0215 21.0001 15.2639 21.0001H11.2462C11.0827 21.0001 10.9198 20.9801 10.7611 20.9404L7 20.0001M14 10.0001V5.00012C14 3.89555 13.1046 3.00012 12 3.00012H11.9045C11.405 3.00012 11 3.40509 11 3.90465C11 4.61895 10.7886 5.31727 10.3923 5.91161L7 11.0001V20.0001M14 10.0001H12M7 20.0001H5C3.89543 20.0001 3 19.1047 3 18.0001V12.0001C3 10.8956 3.89543 10.0001 5 10.0001H7.5" stroke="#858585" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Yes</span>
+              </button>
+              <button type="button" class="button article-vote article-vote-down" data-auth-action="signin" aria-label="This article was not helpful" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9.99991 14.0001H5.23598C3.74922 14.0001 2.78222 12.4355 3.44712 11.1057L6.94712 4.1057C7.28591 3.42813 7.97843 3.00012 8.73598 3.00012H12.7537C12.9172 3.00012 13.0801 3.02018 13.2388 3.05984L16.9999 4.00012M9.99991 14.0001V19.0001C9.99991 20.1047 10.8953 21.0001 11.9999 21.0001H12.0954C12.5949 21.0001 12.9999 20.5952 12.9999 20.0956C12.9999 19.3813 13.2113 18.683 13.6076 18.0886L16.9999 13.0001V4.00012M9.99991 14.0001H11.9999M16.9999 4.00012H18.9999C20.1045 4.00012 20.9999 4.89555 20.9999 6.00012V12.0001C20.9999 13.1047 20.1045 14.0001 18.9999 14.0001H16.4999" stroke="#858585" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span>No</span>
+              </button>
+            </div>
+            <div class="callout">Have more questions? <a href="/hc/en-us/requests/new">Submit a ticket</a></div>
+            <small class="article-votes-count">
+              <span class="article-vote-label">0 out of 0 found this helpful</span>
+            </small>
+          </div>
+  
+        
+        <div class="article-return-to-top">
+          <a href="#article-container">
+            Return to top
+            <svg xmlns="http://www.w3.org/2000/svg" class="article-return-to-top-icon" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
+
+      <div class="article-relatives">
+        
+        
+          
+  <section class="related-articles">
+    
+      <h2 class="related-articles-title">Related articles</h2>
+    
+    <ul>
+      
+        <li>
+          <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBdJYtGVEToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBf6l%2Bl5FDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJKL2hjL2VuLXVzL2FydGljbGVzLzE5MzM1MTYwNjc4Njc5LUFyYy1NYXgtQm9vc3QtWW91ci1Ccm93c2luZy13aXRoLUFJBjsIVDoJcmFua2kG--3ce6d00cc23a7dd1c2a05e5fc3c4eb32cc233a57" rel="nofollow">Arc Max: Boost Your Browsing with AI</a>
+        </li>
+      
+        <li>
+          <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBf8faGkEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBf6l%2Bl5FDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJHL2hjL2VuLXVzL2FydGljbGVzLzIwNDk4MjkzMzI0ODIzLUFyYy1mb3ItbWFjT1MtMjAyNC1SZWxlYXNlLU5vdGVzBjsIVDoJcmFua2kH--4bb4a9130fc15b51e08a4794461f778c2135c50f" rel="nofollow">Arc for macOS - 2024 Release Notes</a>
+        </li>
+      
+        <li>
+          <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJfccjO7EjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBf6l%2Bl5FDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI5L2hjL2VuLXVzL2FydGljbGVzLzIwNTk1MjMxMzQ5OTExLUtleWJvYXJkLVNob3J0Y3V0cwY7CFQ6CXJhbmtpCA%3D%3D--ca92e9cc2d8a5011b16829d475cc662aa65ad3f3" rel="nofollow">Keyboard Shortcuts</a>
+        </li>
+      
+        <li>
+          <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJdaC6GkEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBf6l%2Bl5FDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI0L2hjL2VuLXVzL2FydGljbGVzLzIwNDk4Mjg1ODEyMzc1LVJlbGVhc2UtTm90ZXMGOwhUOglyYW5raQk%3D--5e4c9ece92f7e14251e46efc881a439af2e738ca" rel="nofollow">Release Notes</a>
+        </li>
+      
+        <li>
+          <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJcEBe%2BkEToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBf6l%2Bl5FDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI2L2hjL2VuLXVzL2FydGljbGVzLzE5NDAwMDgyMzkyMjE1LUFyYy1mb3ItV2luZG93cwY7CFQ6CXJhbmtpCg%3D%3D--b9ccb6c0a17a4ae22e5b44161f0aa7f2fbb970c0" rel="nofollow">Arc for Windows</a>
+        </li>
+      
+    </ul>
+  </section>
+
+
+        
+      </div>
+      
+    </article>
+  </div>
+</div>
+
+<script>
+
+
+
+const headings = document.querySelectorAll('.article-content h1, .article-content h2, .article-content h3')
+const headingCount = headings.length
+
+if (headingCount > 1) {
+  const main = document.querySelector('#main-content')
+  main.classList.add('with-toc')
+
+  const titleElem = document.querySelector('.article-title')
+  let title = titleElem.textContent
+
+  const stringToHTML = (str) => {
+    const dom = document.createElement('div')
+    dom.innerHTML = str
+    return dom
+  }
+
+  
+  let titleAnchor = titleElem.getAttribute('data-title')
+  titleAnchor = titleAnchor.replace(/[^a-z0-9\s]/gi, '').replace(/\s/g, '').toLowerCase()
+  titleElem.setAttribute('id', titleAnchor)
+
+  const tocHTML = document.createElement('ul')
+  tocHTML.className = 'article-toc'
+
+  const targetTOC = document.querySelector('.article-toc-container')
+  targetTOC.prepend(tocHTML)
+  tocHTML.style.display = "block"
+
+  let tocNav = ''
+
+  
+  
+  headings.forEach((h2) => {
+    h2.classList.add('anchor-link')
+
+    
+    let thisTitle = h2.textContent
+    thisTitle = thisTitle.replace(/[^a-z0-9\s]/gi, '').replace(/\s/g, '').toLowerCase()
+    thisTitle = thisTitle.replace(/\s+/g, '-')
+    thisTitle = thisTitle.toLowerCase()
+
+    
+    h2.setAttribute('id', thisTitle)
+  })
+
+  headings.forEach((h2) => {
+  // Skip empty or &nbsp; h2 tags
+  if (!h2.textContent.trim() || h2.textContent.trim() === '\u00A0') {
+    return;
+  }
+
+  // update anchor
+  const thisID = h2.getAttribute('id');
+  h2.setAttribute('id', thisID);
+
+  // Section title
+  let sectionTitle = h2.textContent;
+  sectionTitle = sectionTitle.replace('link', '');
+
+  // Remove spaces for nav slug
+  let sectionSlug = sectionTitle.replace(/[^a-z0-9\s]/gi, '').replace(/\s/g, '').toLowerCase();
+  sectionSlug = sectionSlug.replace('link', '');
+
+  // Insert the h2
+  const headlineType = h2.nodeName;
+  tocNav = `<li><a data-headline='${headlineType}' data-anchor-name='${sectionSlug}' href='#${sectionSlug}'>${sectionTitle}</a></li>`;
+  tocNav = stringToHTML(tocNav);
+
+  const tocNavTarget = document.querySelector('.article-toc');
+  tocNavTarget.append(tocNav);
+});
+
+  
+  const clearNavActive = () => {
+    document.querySelectorAll('.article-toc a').forEach((a) => a.classList.remove('active'))
+  }
+
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.article-content .anchor-link')
+    const scroll = window.scrollY + 1
+
+    
+    sections.forEach((i) => {
+      const targetName = i.getAttribute('id')
+      scroll >= i.offsetTop - 350 ? (clearNavActive(), document.querySelector(`.article-toc a[data-anchor-name='${targetName}']`).classList.add('active')) : null
+    })
+  })
+
+  
+  const tocLinks = document.querySelectorAll('.article-toc a')
+  tocLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      const target = link.getAttribute('href')
+      const targetElem = document.querySelector(`.article-body .anchor-link${target}`)
+      window.scrollTo({ behavior: 'smooth', top: targetElem.offsetTop - 90 })
+    })
+  })
+}
+
+  
+</script>
+  </main>
+
+  <div class="request-callout">
+  <div class="container">
+    <h3>Need further assistance?</h3>
+    <a href="/hc/requests/new" class="button">Contact the Team</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a href="https://arc.net/"><img src="/hc/theming_assets/01HZPQZ0M1TS9G3EWV27ZVXQPR" /></a>
+      <div class="col">
+        <strong>Product</strong>
+        <nav>
+        <a href="https://arc.net/privacy">Privacy Policy</a>
+        <a href="https://arc.net/security">Security</a>
+        <a href="https://arc.net/max">Arc Max</a>
+        <a href="https://apps.apple.com/us/app/arc-search-find-it-faster/id6472513080">Arc for iPhone</a>
+        <a href="https://arc.net/boosts">Arc Boosts</a>
+        <a href="https://arc.net/integrations">Integrations</a>
+        <a href="https://arc.net/credits">Credits</a>
+        </nav>      
+      </div>
+      <div class="col">
+        <strong>Resources</strong>
+        <nav>
+        <a href="https://resources.arc.net/hc/en-us/articles/20498293324823-2024-Release-Notes">Release Notes</a>
+        <a href="https://arc.net/blog">Blog</a>
+        <a href="https://arc.net/faq">FAQ</a>
+        <a href="https://thebrowser.company/careers/">Careers @ BCNY</a>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/c/TheBrowserCompany">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="TheBrowserCompany on Youtube"><path d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155 21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991C21.9991 11.9991 21.9991 12.0028 21.9991 12.0099L21.9982 12.1625C21.992 12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991C11.9991 19.9991 11.9956 19.9991 11.9887 19.9991L11.7545 19.9983C10.6241 19.9921 5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z" fill="currentColor"></path>
+          </svg>
+          </a>
+            <a href="https://twitter.com/browsercompany">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="@browsercompany on Twitter"><path d="M22.2125 5.65605C21.4491 5.99375 20.6395 6.21555 19.8106 6.31411C20.6839 5.79132 21.3374 4.9689 21.6493 4.00005C20.8287 4.48761 19.9305 4.83077 18.9938 5.01461C18.2031 4.17106 17.098 3.69303 15.9418 3.69434C13.6326 3.69434 11.7597 5.56661 11.7597 7.87683C11.7597 8.20458 11.7973 8.52242 11.8676 8.82909C8.39047 8.65404 5.31007 6.99005 3.24678 4.45941C2.87529 5.09767 2.68005 5.82318 2.68104 6.56167C2.68104 8.01259 3.4196 9.29324 4.54149 10.043C3.87737 10.022 3.22788 9.84264 2.64718 9.51973C2.64654 9.5373 2.64654 9.55487 2.64654 9.57148C2.64654 11.5984 4.08819 13.2892 6.00199 13.6731C5.6428 13.7703 5.27232 13.8194 4.90022 13.8191C4.62997 13.8191 4.36771 13.7942 4.11279 13.7453C4.64531 15.4065 6.18886 16.6159 8.0196 16.6491C6.53813 17.8118 4.70869 18.4426 2.82543 18.4399C2.49212 18.4402 2.15909 18.4205 1.82812 18.3811C3.74004 19.6102 5.96552 20.2625 8.23842 20.2601C15.9316 20.2601 20.138 13.8875 20.138 8.36111C20.138 8.1803 20.1336 7.99886 20.1256 7.81997C20.9443 7.22845 21.651 6.49567 22.2125 5.65605Z" fill="currentColor"></path>
+              </svg>
+          </a>
+        </div>        
+        </nav>
+      </div>
+    </div>
+    <a href="https://thebrowser.company/" class="footer-browser-co-logo-link"><img src="/hc/theming_assets/01HZPQZ0R0AA05AGWWWK1ZD8BK" class="footer-browser-co-logo"/></a>
+  </div>
+</footer>
+
+
+
+  <!-- / -->
+
+  
+  <script src="//static.zdassets.com/hc/assets/en-us.71c5d96c35a64d552c34.js"></script>
+  <script src="https://thebrowsercompany.zendesk.com/auth/v2/host/without_iframe.js" data-brand-id="16435094084503" data-return-to="https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes" data-theme="hc" data-locale="en-us" data-auth-origin="16435094084503,true,true"></script>
+
+  <script type="text/javascript">
+  /*
+
+    Greetings sourcecode lurker!
+
+    This is for internal Zendesk and legacy usage,
+    we don't support or guarantee any of these values
+    so please don't build stuff on top of them.
+
+  */
+
+  HelpCenter = {};
+  HelpCenter.account = {"subdomain":"thebrowsercompany","environment":"production","name":"The Browser Company"};
+  HelpCenter.user = {"identifier":"da39a3ee5e6b4b0d3255bfef95601890afd80709","email":null,"name":"","role":"anonymous","avatar_url":"https://assets.zendesk.com/hc/assets/default_avatar.png","is_admin":false,"organizations":[],"groups":[]};
+  HelpCenter.internal = {"asset_url":"//static.zdassets.com/hc/assets/","web_widget_asset_composer_url":"https://static.zdassets.com/ekr/snippet.js","current_session":{"locale":"en-us","csrf_token":null,"shared_csrf_token":null},"settings":{},"usage_tracking":{"event":"article_viewed","data":"BAh7CDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoPYXJ0aWNsZV9pZGwrCBf6l+l5FDoKX21ldGF7DDoPYWNjb3VudF9pZGkE5bgUAToTaGVscF9jZW50ZXJfaWRsKwgXm9Of8g46DWJyYW5kX2lkbCsIl9vxl/IOOgx1c2VyX2lkMDoTdXNlcl9yb2xlX25hbWVJIg5BTk9OWU1PVVMGOwZUOwBJIgplbi11cwY7BlQ6GmFub255bW91c190cmFja2luZ19pZDA=--43d0c8a3a9896cd0d6f1090c47b77d3eea59f725","url":"https://resources.arc.net/hc/activity"},"current_record_id":"22513842649623","current_record_url":"/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes","current_record_title":"Arc for Windows - 2023/2024 Release Notes","search_results_count":null,"current_text_direction":"ltr","current_brand":{"id":16435094084503,"account_id":18135269,"name":"The Browser Company","active":true,"deleted_at":null,"created_at":"2023-07-31T23:30:05Z","updated_at":"2024-01-29T17:36:28Z","route_id":14785274,"signature_template":"{{agent.signature}}"},"current_brand_url":"https://thebrowsercompany.zendesk.com","current_host_mapping":"resources.arc.net","current_path":"/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2024-Release-Notes","authentication_domain":"https://thebrowsercompany.zendesk.com","show_autocomplete_breadcrumbs":true,"user_info_changing_enabled":false,"has_user_profiles_enabled":true,"has_end_user_attachments":true,"user_aliases_enabled":false,"has_anonymous_kb_voting":false,"has_multi_language_help_center":true,"show_at_mentions":false,"embeddables_config":{"embeddables_web_widget":true,"embeddables_connect_ipms":false},"base_domain":"zendesk.com","answer_bot_subdomain":"static","manage_content_url":"https://resources.arc.net/hc/en-us","arrange_content_url":"https://resources.arc.net/hc/admin/arrange_contents?locale=en-us","general_settings_url":"https://resources.arc.net/hc/admin/general_settings?locale=en-us","user_segments_url":"https://thebrowsercompany.zendesk.com/knowledge/user_segments?brand_id=16435094084503","has_gather":true,"has_ckeditor":true,"has_community_enabled":false,"has_community_badges":true,"has_community_post_content_tagging":false,"has_gather_content_tags":true,"has_guide_content_tags":true,"has_user_segments":true,"has_answer_bot_web_form_enabled":false,"has_edit_user_profile_v2":false,"has_garden_modals":false,"billing_url":"/access/return_to?return_to=https%3A%2F%2Fthebrowsercompany.zendesk.com%2Fadmin%2Fbilling%2Fsubscription","is_account_owner":false,"theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd80709-2-preview","is_preview":false,"has_alternate_templates":true,"arrange_articles_url":"https://thebrowsercompany.zendesk.com/knowledge/arrange?brand_id=16435094084503","article_verification_url":"https://thebrowsercompany.zendesk.com/knowledge/verification?brand_id=16435094084503","has_article_verification":true,"guide_language_settings_url":"https://resources.arc.net/hc/admin/language_settings?locale=en-us","docs_importer_url":"https://thebrowsercompany.zendesk.com/knowledge/import_articles?brand_id=16435094084503","content_tags_url":"https://thebrowsercompany.zendesk.com/knowledge/content_tags?brand_id=16435094084503","community_badges_url":"https://thebrowsercompany.zendesk.com/knowledge/community_badges?brand_id=16435094084503","community_settings_url":"https://thebrowsercompany.zendesk.com/knowledge/community_settings?brand_id=16435094084503","gather_plan_state":"subscribed","search_settings_url":"https://thebrowsercompany.zendesk.com/knowledge/search_settings?brand_id=16435094084503","has_multibrand_search_in_plan":true,"has_search_settings_in_plan":true,"theming_api_version":3,"theming_settings":{"brand_color":"#17494D","brand_text_color":"#FFFFFF","text_color":"#2F3941","link_color":"#1F73B7","hover_link_color":"#0F3554","visited_link_color":"#9358B0","background_color":"#FFFFFF","heading_font":"'Marlin Soft', Arial, 'Helvetica Neue', Helvetica, sans-serif","text_font":"'Marlin Soft', Arial, 'Helvetica Neue', Helvetica, sans-serif","logo":"/hc/theming_assets/01HZPQZ0F2XCQNFEFY41C54GGW","footer_logo":"/hc/theming_assets/01HZPQZ0M1TS9G3EWV27ZVXQPR","footer_logo_large":"/hc/theming_assets/01HZPQZ0R0AA05AGWWWK1ZD8BK","show_brand_name":false,"favicon":"/hc/theming_assets/01HZPQZ0Z0KTF23X4R7HT7T5KV","homepage_background_image":"/hc/theming_assets/01HZPQZ14KD70X44NRTBPAWAJK","community_background_image":"/hc/theming_assets/01HZPQZ1A8QT0ES5ASJC86AZ99","community_image":"/hc/theming_assets/01HZPQZ1E0T936MQNFKH1F6VH0","instant_search":true,"scoped_kb_search":true,"scoped_community_search":false,"show_recent_activity":false,"show_articles_in_section":false,"show_article_author":false,"show_article_comments":false,"show_follow_article":false,"show_recently_viewed_articles":false,"show_related_articles":true,"show_article_sharing":false,"show_follow_section":false,"show_follow_post":false,"show_post_sharing":false,"show_follow_topic":false,"request_list_beta":false},"has_pci_credit_card_custom_field":true,"current_brand_id":16435094084503,"help_center_restricted":false,"current_brand_active":true,"is_assuming_someone_else":false,"flash_messages":[],"user_photo_editing_enabled":true,"has_docs_importer":false,"user_preferred_locale":"en-us","base_locale":"en-us","has_end_user_session_renewal":true,"has_user_session_cookie_enabled":false,"has_end_user_2fa":true,"has_custom_statuses_enabled":true,"has_generative_answers_in_help_center":false,"has_hc_generative_answers_setting_enabled":false,"version":"v24856"};
+</script>
+
+  
+  <script src="//static.zdassets.com/hc/assets/hc_enduser-9d9197f7dd313bd75c535be677be1dea.js"></script>
+  <script type="text/javascript" src="/hc/theming_assets/18135269/16435094084503/script.js?digest=24927900782359"></script>
+  
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8b1846a32cdf09c7',t:'MTcyMzM3OTgzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
