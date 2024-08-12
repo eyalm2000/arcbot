@@ -189,3 +189,7 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
 ```
 
 lol why did u read this bullshit
+
+
++rss podcast
++arc.net/release-notes
