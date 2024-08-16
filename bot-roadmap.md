@@ -28,6 +28,7 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
   ARC_RC_EMOJI="<:arcReleaseCandidate:1159647421316485162>"
   TIME_EMOJI="<:time:1022128056917299302>"
   LOGGING_CHANNEL_ID=111111111111111111
+  PODCAST_ROLE_ID=111222333444555666
   ```
 
 ### 2. Version Checking
@@ -88,14 +89,12 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
 
     > Arc does not provide official changelogs for Early Birds versions.
 
-    **Changes in this version:**
-    > Processing the new version, please wait.
-
     **Additional Information:**
     > [MSIX_CHANGES]
 
     [**Download Arc Early Birds**](<https://releases.arc.net/windows/rc/[EARLYBIRDS_HASH]/[VERSION]/Arc.x64.msix>)
     ```
+  - also include the msix chages section only after the processing was done. (last time stage 1 changes)
   - Content for `EARLY_CHAT_CHANNEL_ID`:
     "There is a new version of Arc Early Birds! Go and download it!"
 
@@ -104,6 +103,14 @@ To build a Discord bot in Python 3 that automatically updates the Arc community 
 - Implement a logging system that:
   - Sends logs to the terminal
   - Sends logs to a dedicated Discord channel (use `LOGGING_CHANNEL_ID`)
+
+
+### 5. Last minute stage 1 things
+
+- rss podcast
+  - there is podcast that i want to check for new episodes, if there is a new one, send message on news channel and ping at the end PODCAST_ROLE_ID. use style of new version message
+- arc.net/release-notes
+  - there is a visual and fun release notesfor arc. every week the link arc.net/release-notes redict to another link with the fun release notes. send a message in new channel if the redict changed to another url. use style of new version message. do not ping (rn)
 
 ## Stage 2: Additional Requirements (Optional)
 
